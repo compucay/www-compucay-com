@@ -31,6 +31,6 @@ git branch
 git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
-heroku git:remote -a staging-compucay-ky -r staging-heroku
+heroku git:remote -a staging-compucay-com -r staging-heroku
 git push staging-heroku staging:master
 git checkout development

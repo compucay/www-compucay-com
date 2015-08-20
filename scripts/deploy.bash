@@ -11,7 +11,7 @@
 # 
 # git operations
 git remote remove origin
-git remote add origin https://github.com/compucay/www-compucay-ky.git
+git remote add origin https://github.com/compucay/www-compucay-com.git
 git checkout master || git checkout -b master
 git merge staging
 git push origin master
@@ -19,10 +19,10 @@ git push origin master
 #
 # heroku operations
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
-heroku apps:destroy www-compucay-ky --confirm www-compucay-ky
-heroku apps:create www-compucay-ky
-heroku domains:add www.compucay.ky --app www-compucay-ky
-heroku domains:add compucay.ky --app www-compucay-ky
-heroku git:remote -a www-compucay-ky -r production-heroku
+heroku apps:destroy www-compucay-com --confirm www-compucay-com
+heroku apps:create www-compucay-com
+heroku domains:add www.compucay.com --app www-compucay-com
+heroku domains:add compucay.com --app www-compucay-com
+heroku git:remote -a www-compucay-com -r production-heroku
 git push production-heroku master:master
 git checkout development
